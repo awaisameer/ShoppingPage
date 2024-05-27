@@ -1,0 +1,716 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QuickPikLandingPage</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+        }
+
+        header {
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .logo {
+            font-size: 24px;
+
+        }
+
+        .green {
+            color: green;
+        }
+
+        .black {
+            color: black;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #333;
+            font-size: 16px;
+        }
+
+        .shop-now {
+            background-color: #0cb53b;
+            color: #fff;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        .hero {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 40px;
+            /* background-color: #f0f4f8; */
+            position: relative;
+        }
+
+        .hero-content {
+            max-width: 600px;
+        }
+
+        .discount {
+            background-color: #dfffd6;
+            color: black;
+            padding: 5px 10px;
+            display: inline-block;
+            border-radius: 5px;
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            color: #333;
+        }
+
+        .hero h1 span {
+            color: red;
+        }
+
+        .description {
+            font-size: 18px;
+            color: #666;
+            margin: 20px 0;
+        }
+
+        .testimonial {
+            display: flex;
+            align-items: center;
+            margin-top: 20px;
+        }
+
+        .testimonial img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+
+        .testimonial-text {
+
+            color: #333;
+        }
+
+        .hero-image {
+            width: 400px;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        .trending-products {
+            padding: 40px;
+            text-align: center;
+        }
+
+        .trending-products h2 {
+            font-size: 32px;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .products {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+
+        .product {
+            width: 150px;
+            text-align: center;
+        }
+
+        .product img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        .product p {
+            margin-top: 10px;
+            font-size: 16px;
+            color: #333;
+        }
+
+        .deal-of-the-week {
+            padding: 40px;
+            text-align: center;
+        }
+
+        .deal-of-the-week h2 {
+            font-size: 32px;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .deals {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+
+        .deal {
+            width: 300px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            margin: 20px;
+            text-align: left;
+        }
+
+        .deal img {
+            width: 100%;
+            height: auto;
+        }
+
+        .deal-info {
+            padding: 20px;
+        }
+
+        .deal-info h3 {
+            font-size: 20px;
+            color: #333;
+        }
+
+        .deal-info p {
+            font-size: 18px;
+            color: #666;
+            margin: 10px 0;
+        }
+
+        .deal-info ul {
+            list-style: none;
+            padding: 0;
+            margin: 10px 0;
+        }
+
+        .deal-info ul li {
+            font-size: 16px;
+            color: #666;
+            margin: 5px 0;
+        }
+
+        .buy-now {
+            display: inline-block;
+            background-color: #0cb53b;
+            color: #fff;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        .medical-products {
+            text-align: center;
+            margin-top: 20px;
+            margin: auto;
+        }
+
+        .medical-products h2 {
+            margin-bottom: 20px;
+        }
+
+        .medical-products-container {
+            display: flex;
+            width: auto;
+            height: auto;
+            justify-content: space-evenly
+        }
+
+        .medical-product {
+            width: 50px;
+            flex: 1;
+            position: relative;
+            color: #184363;
+
+            padding: 70px;
+            text-align: left;
+            border-radius: 8px;
+            background-size: cover;
+            background-position: center;
+            margin-bottom: 20px;
+            margin-left: 20px;
+            margin-right: 20px;
+        }
+
+        .medical-product:nth-child(1) {
+            height:
+                100px;
+            width: 50p;
+            background-image: url('images/div.banner-back.png');
+        }
+
+        .medical-product:nth-child(2) {
+            background-image: url('images/div.banner-back\ \(1\).png');
+        }
+
+        .medical-product h3,
+        .medical-product p,
+        .medical-product .shop-now {
+            position: relative;
+            z-index: 1;
+        }
+
+        .medical-product::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            /* width: 100%;
+            height: 100%; */
+
+            z-index: 0;
+            border-radius: 8px;
+        }
+
+        .medical-product h3 {
+            margin-top: 0;
+        }
+
+        .medical-product p,
+        .medical-product .shop-now {
+            margin-bottom: 0;
+        }
+
+        .shop-now {
+            display: inline-block;
+            padding: 8px 20px;
+            background-color: #007bff;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .shop-now:hover {
+            background-color: #0056b3;
+        }
+
+        .big-savings {
+            padding: 40px;
+            background-color: #f0f4f8;
+            text-align: center;
+        }
+
+        .big-savings h2 {
+            font-size: 32px;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .big-savings h2 span {
+            color: red;
+        }
+
+        .big-savings p {
+            font-size: 18px;
+            color: #666;
+            margin: 0;
+        }
+
+        .testimonials {
+            padding: 40px;
+            text-align: center;
+            background-color: #B4FEC4;
+        }
+
+        .testimonials h2 {
+            font-size: 32px;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .testimonial-cards {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+
+        .testimonial-card {
+            width: 250px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 25px;
+            margin: 4px;
+            text-align: left;
+        }
+
+        .testimonial-card p {
+            font-size: 16px;
+            color: #666;
+        }
+
+        .author {
+            font-size: 18px;
+            font-weight: bold;
+            color: #333;
+            margin-top: 10px;
+        }
+
+        .author-role {
+            font-size: 16px;
+            color: #999;
+        }
+
+        .signup {
+            padding: 40px;
+            text-align: center;
+            background: linear-gradient(to right, rgba(108, 210, 139, 0.8), white), #3CDA5F;
+
+        }
+
+        .signup-content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .signup-content img {
+            width: 200px;
+            height: auto;
+            border-radius: 10px;
+            margin: 50px;
+        }
+
+        .signup-info {
+            max-width: 450px;
+            text-align: start;
+        }
+
+        .signup-info h2 {
+            font-size: 30px;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .sign-up {
+            display: inline-block;
+            background-color: #0cb53b;
+            color: #fff;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        footer {
+            background-color: #0b1d31;
+            color: #fff;
+            padding: 40px 20px;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+
+        .footer-logo {
+            font-size: 32px;
+            color: #0cb53b;
+        }
+
+        .footer-content p {
+            font-size: 16px;
+            color: #ddd;
+        }
+
+        .social-media a img {
+            width: 30px;
+            height: auto;
+            margin: 0 10px;
+        }
+
+        .footer-links,
+        .footer-locations {
+            margin: 20px;
+        }
+
+        .footer-links h3,
+        .footer-locations h3 {
+            font-size: 20px;
+            color: #fff;
+        }
+
+        .footer-links ul,
+        .footer-locations ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer-links ul li,
+        .footer-locations ul li {
+            font-size: 16px;
+            color: #ddd;
+            margin: 10px 0;
+        }
+
+        .footer-links ul li a {
+            text-decoration: none;
+            color: #ddd;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding: 20px;
+            border-top: 1px solid #333;
+        }
+
+        .footer-bottom p {
+            font-size: 16px;
+            color: #ddd;
+        }
+
+        @media (max-width: 768px) {
+            .hero {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .hero-content,
+            .hero-image {
+                max-width: 100%;
+            }
+
+            .products,
+            .deals,
+            .medical-products-container,
+            .testimonial-cards,
+            .signup-content {
+                flex-direction: column;
+            }
+
+            .product,
+            .deal,
+            .medical-product,
+            .testimonial-card,
+            .signup-content img,
+            .signup-info {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+
+            <h1><span class="logo black">Quick</span><span class="logo green">Pik</span></h1>
+            <nav>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About us</a></li>
+                    <li><a href="#">Products</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Contact us</a></li>
+                </ul>
+            </nav>
+            <a href="#" class="shop-now" style="color: ;">ShopNow</a>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <p class="discount">30% Off on groceries</p>
+                <h1>Shop smarter, not harder. <span>Get it ordered.</span></h1>
+                <p class="description">Save time, skip the lines. We’ve got you covered.</p>
+                <a href="#" class="shop-now">ShopNow</a>
+
+            </div>
+            <div>
+                <img src="images/shoppingwoman .png" alt="Shopping Woman" class="hero-image">
+                <div class="testimonial testimonial-card   ">
+                    <img src="images/Ellipse 8.png" alt="Profile">
+                    <h3 style="font-size: medium;">Ashley Daniels</p>
+                        <p class="testimonial-text " style="font-size: 16px;
+                    color: #666;">"Saved me tons of time - never going back to grocery
+                            shopping!"</p>
+                </div>
+            </div>
+
+
+        </section>
+
+        <section class="trending-products">
+            <h2>Trending Products</h2>
+            <div class="products">
+                <div class="product">
+                    <img src="images/Frame 27.png" alt="Grocery">
+                    <p>Grocery</p>
+                </div>
+                <div class="product">
+                    <img src="images/Frame 28.png" alt="Shoes">
+                    <p>Shoes</p>
+                </div>
+                <div class="product">
+                    <img src="images/Frame 29.png" alt="Phones">
+                    <p>Phones</p>
+                </div>
+                <div class="product">
+                    <img src="images/Frame 30.png" alt="Google Home">
+                    <p>Google Home</p>
+                </div>
+                <div class="product">
+                    <img src="images/Frame 31.png" alt="Alarm Clocks">
+                    <p>Alarm Clocks</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="deal-of-the-week">
+            <h2>Deal Of The Week</h2>
+            <div class="deals">
+                <div class="deal">
+                    <img src="images/div.post-image.png" alt="Elegant Perfumes">
+                    <div class="deal-info">
+                        <h3>Elegant Perfumes</h3>
+                        <p>$16.00</p>
+                        <ul>
+                            <li>Long Lasting</li>
+                            <li>Affordable price</li>
+                            <li>Best Perfume</li>
+                        </ul>
+                        <a href="#" class="buy-now">Buy Now</a>
+                    </div>
+                </div>
+                <div class="deal">
+                    <img src="images/Link → product74-600x600.jpg.png" alt="Strawberry Shampoo">
+                    <div class="deal-info">
+                        <h3>Strawberry Shampoo</h3>
+                        <p>$18.88</p>
+                        <ul>
+                            <li>Allergy free</li>
+                            <li>Best Product</li>
+                            <li>Affordable price</li>
+                        </ul>
+                        <a href="#" class="buy-now">Buy Now</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="medical-products">
+            <h2>Medical Products</h2>
+            <div class="medical-products-container">
+                <div class="medical-product">
+                    <h3>Breathable Face Mask</h3>
+                    <p>From $0.99</p>
+                    <a href="#" class="shop-now">Shop now ></a>
+                </div>
+                <div class="medical-product">
+                    <h3>Medicine pack</h3>
+                    <p>Get it now 45% Off</p>
+                    <a href="#" class="shop-now">Shop now ></a>
+                </div>
+            </div>
+        </section>
+
+        <section class="big-savings medical-products-container" style="flex: auto;">
+            <div><img height="300px" width="350px" src="images/Polygon 1.png" alt=""></div>
+
+            <h2>Big city savings, delivered to your <span>doorstep.</span></h2>
+
+        </section>
+
+        <section class="testimonials">
+            <h2 style="color: #184363;">Unlock the secrets of satisfied customers.</h2>
+            <div class="testimonial-cards medical-products-container">
+                <div class="testimonial-card">
+                    <p>"Never going back to waiting in lines! Shop smarter, get it delivered with QuickPik. It's that
+                        simple."</p>
+                    <p class="author">Albus stella</p>
+                    <p class="author-role"><img src="images/Ellipse 4.png" alt=""> Manager @ Howarts</p>
+                </div>
+                <div class="testimonial-card">
+                    <p>"Wide selection, even in my small town! Found everything I needed for my birthday party with just
+                        a few clicks. Thanks, QuickPik!"</p>
+                    <p class="author">Severus Snape</p>
+                    <p class="author-role"><img src="images/Ellipse 4 (1).png" alt=""> Manager @ Shyrien</p>
+                </div>
+                <div class="testimonial-card">
+                    <p>"Lifesaver for busy families! Fresh groceries delivered in a flash - dinner's on the table,
+                        thanks QuickPik!"</p>
+                    <p class="author"><img src="images/Ellipse 4 (2).png" alt=""> Harry brige</p>
+                    <p class="author-role">Team Leader @ Gryffindor</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="signup">
+            <div class="signup-content">
+                <img src="images/front-view-male-courier-green-uniform-cape-holding-coffee-cups-with-notepad-smiling-pink-background-service-uniform-delivery-job-removebg-preview 1.png"
+                    alt="Delivery Man">
+                <div class="signup-info">
+                    <h2>SignUp For Exclusive Offers And Discounts</h2>
+                    <a href="#" class="sign-up">Sign Up</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-left">
+                <h2 class="footer-logo"><span class="logo" style="color: white;">Quick</span><span
+                        class="logo green">Pik</span></h2>
+                <p>Shop smarter, not harder. Get it delivered.</p>
+                <div class="social-media">
+                    <a href="#"><img src="images/Vector (1).png" alt="Facebook"></a>
+                    <a href="#"><img src="images/Vector.png" alt="Twitter"></a>
+                    <a href="#"><img src="images/ri_instagram-fill.png" alt="Instagram"></a>
+                    <a href="#"><img src="images/Vector (2).png" alt="Youtube"></a>
+                </div>
+            </div>
+            <div class="footer-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">AboutUs</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Products</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-locations">
+                <h3>Locations</h3>
+                <ul>
+                    <li>Mumbai</li>
+                    <li>Pune</li>
+                    <li>Nagpur</li>
+                    <li>Banglore</li>
+                    <li>Goa</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy;All Rights Reserved QuickPik</p>
+        </div>
+    </footer>
+</body>
+
+</html>
